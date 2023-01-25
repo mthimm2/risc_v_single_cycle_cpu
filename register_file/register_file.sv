@@ -3,13 +3,11 @@ module register_file (
     parameter register_size = 32
 ) (
     input logic clk,
-    input logic [$clog2(num_registers) - 1 : 0] rs, 
-    input logic [$clog2(num_registers) - 1 : 0] rt, 
-    input logic [$clog2(num_registers) - 1 : 0] rd,
+    input logic [$clog2(num_registers) - 1 : 0] rs, rt, rd,
     input logic write_enable,
     input logic [register_size - 1 : 0] write_data,
     output logic [register_size - 1 : 0] read_data_rs, read_data_rt
-)
+);
 
 
     // The array of registers
